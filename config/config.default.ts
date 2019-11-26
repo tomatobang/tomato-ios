@@ -19,7 +19,7 @@ export default () => {
 
   config.cluster = {
     listen: {
-      port: 8003,
+      port: 10003,
     },
   };
 
@@ -75,6 +75,15 @@ export default () => {
     dynamic: false,
     preload: false,
     maxFiles: 20,
+  };
+
+  config.redis = {
+    client: {
+      port: 6379,
+      host: '127.0.0.1',
+      password: '',
+      db: 0,
+    },
   };
 
   config.mongoose = {
